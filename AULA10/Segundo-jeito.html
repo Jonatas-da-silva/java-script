@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sgunda forma com java</title>
+    <style>
+        div{
+            display: inline-block;
+            
+        }
+        
+        div#area{
+            background-color: rgb(94, 181, 94);
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#cubo{
+            background-color: rgb(94, 181, 94);
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        
+            
+        }
+        div#SEU{
+            background-color: rgb(94, 181, 94);
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Segundo jeito com java</h1>
+
+    <div id="area" >
+        interaja...
+
+    </div>
+
+    <div id="cubo" >
+        interaja
+    </div>
+
+    <div id="SEU">
+        sair
+
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        
+        function clicar()
+        {
+            a.innerText = 'clicou'
+            a.style.backgroundColor = 'blue'
+        }
+
+        var c = window.document.getElementById('cubo')
+        a.addEventListener('mouseenter', entrar )
+        function entrar()
+        {
+            c.innerText = 'entrou'
+            c.style.backgroundColor = 'red'            
+        }
+        var s = window.document
+        .getElementById('SEU')
+        s.addEventListener('mouseout', sair)
+        function sair(){
+            s.innerText = 'Você saiu'
+            s.style.backgroundColor = 'yellow'
+            s.style.color = 'black'
+            
+        }
+    </script>
+    
+</body>
+</html>
