@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <form method="get">
+        <p><label for="ipais">Pais:<input type="text" name="pais" id="ipais"></input></label></p>
+        <p>
+            <input type="button" value="Enviar" id="but" onclick="Procurar()">
+        </p>
+        <div id="res"></div>
+    </form>
+    <script>
+        function Procurar(){
+            let ipais = document.getElementById('ipais')
+            let res = document.getElementById("res")
+
+            if(ipais != 'Brasil'){
+                res.innerHTML = `Você é estangeiro, seja bem vindo e faça uma boa visita!`
+            }else{
+                res.innerHTML = `Você é brasileiro, seu retorno é gratificante!`
+            }
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+body{
+    background-color: #5f9ba0c8;
+    height: 100%;
+    margin: 0;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+    font-size: 45px;
+}
+form{ 
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px;
+    height: 250px;
+    border: 2px solid black;
+    padding: 15px;
+
+}
+#but{
+    background:linear-gradient(to left, #9c5f5fb8, rgba(85, 94, 106, 0.587));
+    
+}
+

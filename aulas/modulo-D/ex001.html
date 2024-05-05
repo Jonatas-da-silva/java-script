@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    <form action="" method="get" id="caixa">
+        <p>Infome a velocidade do seu automóvel</p>
+        <p>
+            <label for="ivel">velocidae <input type="number" name="vel" id="ivel"></label>
+
+        </p>
+        <p>
+            <input type="button" value="Conferir" id="but" onclick="calcular()">
+        </p>
+        <div id="res"></div>
+        
+    </form>
+    <script>
+       
+        function calcular(){
+            let ivel = document.getElementById('ivel')
+            let res  = document.getElementById('res')
+            let vel = Number(ivel.value)
+            res.innerHTML = `Sua velocidade atual é ${vel}` 
+            if(vel > 60){
+                res.innerHTML = `<p>Sua velocidade excede o limite da pista,<strong> MULTADO</strong></p>`
+            }else{
+                res.innerHTML = `Você está dirigindo com segurança, dirija com sinto de segurança.`
+            }
+        }
+    </script>
+    
+</body>
+</html>
