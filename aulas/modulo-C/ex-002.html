@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            display: flex;
+            border: 1px solid black;
+            justify-content: space-between;
+            
+        }
+        div#area, div#a2{
+            font: normal 15pt arial ;
+            background: green;
+            color: white;
+            height: 150px ;
+            width: 150px;
+            text-align: center;  
+            line-height: 150px;
+            
+            
+         }
+         div :hover{
+            border-radius: 50%;
+            transition: .20s;
+         }
+
+    </style>
+</head>
+<body>
+    <div id="container" onmouseout="saiu()">
+        <div id="area" onclick="clicar()"> interaja</div>
+        <div id="a2" onmouseenter="entrar()">interaja</div>
+    </div>
+
+    <script>
+        function clicar(){
+          let a = window.document.getElementById('area')
+          a.innerText = 'clicou'
+          a.style.background = 'red';
+        }
+        function entrar(){
+            let b = document.querySelector('div#a2')
+            b.innerText = 'Entrou'
+            b.style.background = 'blue'
+
+        }
+        function saiu(){
+            let c = document.querySelector('div#container')
+            c.style.background = 'yellow'
+        }
+    </script>
+    
+</body>
+</html>

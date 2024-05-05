@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando números</title>
+    <style>
+        form{
+            border: 2px solid black;
+            padding: 15px;
+            box-sizing: content-box;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <p><label for="isoma">Número 1:<input type="number" name="soma" id="n1"></label></p>
+
+        <p><label for="isoma">Número 2: <input type="number" name="soma" id="n2"></label></p>
+        
+        <div id="res"> </div>
+        <input type="button" value="somar" onclick="somar()">
+        
+    </form>
+    <script>
+        function somar(){
+            let n1 = document.querySelector('input#n1')
+            let n2 = document.querySelector('input#n2')
+            let soma = Number(n1.value) + Number(n2.value)
+            let res = document.querySelector('div#res')
+            res.innerHTML = 'Resultado:' + soma
+
+        }
+    </script>
+</body>
+</html>
